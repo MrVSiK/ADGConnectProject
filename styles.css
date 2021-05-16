@@ -52,18 +52,16 @@ body {
     border: 0.82px solid #FFFFFF
 }
 .stores img{
-    width: 12rem;
+    width: 10rem;
     height: 4rem;
     margin: none;
 }
 
 .stores{
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 0 0.5rem 0;
+    margin: 1.5rem 0 0.5rem -0.8rem;
 }
 .btn{
-    margin: 3rem 0;
+    margin: 3rem 0 0 0;
 }
 .btn button{
     width: 15rem;
@@ -84,15 +82,32 @@ body {
     height: 100vh;
 }
 .Right img{
-    width: 150%;
-    height: 120%;
+    width: 200%;
+    height: 150%;
     position: absolute;
-    left: 0;
+    left: -10rem;
     top: -7.5rem;
+    z-index: -1;
 }
 
 .container{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+@media (max-width: 760px){
+    .container{
+        display: inline-block;
+    }
+    .Right{
+        /* background: linear-gradient(0deg,#00000088 30%, #ffffff44 100%); */
+        width: 100vw;
+        height: auto;
+    }
+    .Left{
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
 }
