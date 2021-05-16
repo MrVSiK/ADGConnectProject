@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+
+.ADGlogo{
+    margin: 0 0 2.5rem 0;
+    width: 10.9rem;
+    height: 4rem;
+}
+
+.Left{
+    width: 40%;
+    margin: 2rem 0 0 2rem;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.logo{
+    margin: 1rem 0 0.7rem 0;
+}
+.logo img{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.intro h1{
+    font-size: 3rem;
+    padding: 0.5rem 0;
+    color: #3E74FF;
+    letter-spacing: 0.025rem;
+}
+
+.intro p{
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    
+}
+.lineBreak{
+    width: 15rem;
+    border: 0.82px solid #FFFFFF
+}
+.stores img{
+    width: 12rem;
+    height: 4rem;
+    margin: none;
+}
+
+.stores{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 0.5rem 0;
+}
+.btn{
+    margin: 3rem 0;
+}
+.btn button{
+    width: 15rem;
+    background-color: black;
+    border: 2px solid #3E74FF;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    padding: 1rem 0.5rem;
+}
+
+.btn button:hover{
+    background-color: #3E74FF;
+    color: white;
+}
+.Right{
+    width: 60%;
+    height: 100vh;
+}
+.Right img{
+    width: 150%;
+    height: 120%;
+    position: absolute;
+    left: 0;
+    top: -7.5rem;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
