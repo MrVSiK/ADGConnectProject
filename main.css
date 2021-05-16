@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+html {
+    font-size: 62.5%;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgba(12, 12, 12, 1);
+    height: 100vh;
+    width: 100vw;
+    color: white;
+}
+
+#fullpage {
+    width: 100%;
+    height: 100%;
+}
+
+.section {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span{ 
+    display: none;
+}
+
+/* Navbar */
+
+#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+}
+
+
+
+/* Sign Up Section */
+
+.section-signup {
+
+}
+
+/* Login Section */
+
+.section-login {
+
+}
+
+/* Home Section */
+
+.section-home {
+
+}
+
+/* Alerts Section */
+
+.section-alerts {
+
+}
+
+/* Acknowledgement Section */
+
+.section-acknowledgement {
+    
+}
+
+/* MOM Section */
+
+.section-mom {
+    
+}
+
+/* Profile Section */
+
+.section-profile {
+    
+}
+
+/* Media queries */
