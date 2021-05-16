@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js" 
+    integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ==" 
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css" 
+    integrity="sha512-hGBKkjAVJUXoImyDezOKpzuY4LS1eTvJ4HTC/pbxn47x5zNzGA1vi3vFQhhOehWLTNHdn+2Yqh/IRNPw/8JF/A==" 
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./main.css" />
+
+    <title>ADG-CONNECT</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <ul id="menu">
+        <li data-menuanchor="Signup"><a href="#signup">Signup</a></li>
+        <li data-menuanchor="Login"><a href="#login">Login</a></li>
+        <li data-menuanchor="Home"><a href="#home">Home</a></li>
+        <li data-menuanchor="Alerts"><a href="#alerts">Alerts</a></li>
+        <li data-menuanchor="Acknowledgement"><a href="#acknowledgement">Acknowledgement</a></li>
+        <li data-menuanchor="MOM"><a href="#mom">MOM</a></li>
+        <li data-menuanchor="Profile"><a href="#profile">Profile</a></li>
+      </ul>
+
+      <!-- fullpage.js -->
+      <div id="fullpage">
+
+        <!-- Sign Up section -->
+        <div class="section section-signup" data-anchor="signup">
+            Signup
+        </div>
+
+        <!-- Login section -->
+        <div class="section section-login" data-anchor="login">
+            Login
+        </div>
+    
+        <!-- Home section -->
+        <div class="section section-home" data-anchor="home">
+            Home
+        </div>
+    
+        <!-- Alerts section -->
+        <div class="section section-alerts" data-anchor="alerts">
+            Alerts
+        </div>
+    
+        <!-- Acknowledgement section -->
+        <div class="section section-acknowledgement" data-anchor="acknowledgement">
+            Acknowledgement
+        </div>
+    
+        <!-- MOM section -->
+        <div class="section section-mom" data-anchor="mom">
+            MOM
+        </div>
+    
+        <!-- Profile section -->
+        <div class="section section-profile" data-anchor="profile">
+            Profile
+        </div>
+      </div>
+      <script>
+        new fullpage("#fullpage", {
+          //options here
+          autoScrolling: true,
+          anchors: ["signup", "login", "home", "alerts", "acknowledgement", "mom", "profile"],
+          scrollHorizontally: true,
+          animateAnchor:true,
+          navigation: true,
+          navigationPosition: 'right',
+          navigationTooltips: ["Signup", "Login", "Home", "Alerts", "Acknowledgement", "MOM", "Profile"],
+          showActiveTooltip: false,
+          menu: '#menu',
+          autoScrolling: true,
+          slidesNavigation: true
+        });
+      </script>
+</body>
+</html>
