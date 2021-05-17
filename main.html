@@ -12,20 +12,40 @@
     crossorigin="anonymous" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./main.css" />
+    <!-- Font Awesome....we have to add it before we start using their icons -->
+    <script defer src="https://kit.fontawesome.com/e87d687bba.js"></script>
+    <!--Bootstrap js files-->
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <title>ADG-CONNECT</title>
 </head>
 <body>
     <!-- Navbar -->
     <ul id="menu">
-        <li data-menuanchor="Signup"><a href="#signup">Signup</a></li>
-        <li data-menuanchor="Login"><a href="#login">Login</a></li>
-        <li data-menuanchor="Home"><a href="#home">Home</a></li>
-        <li data-menuanchor="Alerts"><a href="#alerts">Alerts</a></li>
-        <li data-menuanchor="Acknowledgement"><a href="#acknowledgement">Acknowledgement</a></li>
-        <li data-menuanchor="MOM"><a href="#mom">MOM</a></li>
-        <li data-menuanchor="Profile"><a href="#profile">Profile</a></li>
-      </ul>
+        <nav >
+          <a href="index.html"><img class="nav-logo " src="./assets/navbar/Logo Title.svg" alt="nav-logo" ></a>
+          
+          <div class="nav-links" id="navLinks">
+            <!-- <img class ="navbar-img"src="./Landing.svg" alt="navbar-image"> -->
+          <i class="far fa fa-window-close" onclick="hideMenu()"></i>
+          <ul>
+          <li data-menuanchor="Signup"><a href="#signup">Signup</a></li>
+          <li data-menuanchor="Login"><a href="#login">Login</a></li>
+          <li data-menuanchor="Home"><a href="#home">Home</a></li>
+          <li data-menuanchor="Alerts"><a href="#alerts">Alerts</a></li>
+          <li data-menuanchor="Acknowledgement"><a href="#acknowledgement">Acknowledgement</a></li>
+          <li data-menuanchor="MOM"><a href="#mom">MOM</a></li>
+          <li data-menuanchor="Profile"><a href="#profile">Profile</a></li>
+          </ul>
+          
+          </div>    
+          <i class="fas fa fa-bars" onclick="showMenu()"></i>
+              
+         </nav>
+    </ul>
+    
 
       <!-- fullpage.js -->
       <div id="fullpage">
@@ -81,6 +101,17 @@
           autoScrolling: true,
           slidesNavigation: true
         });
+        // --------javascript for toggle menu--------
+        var navLinks=document.getElementById("navLinks");
+        function showMenu()
+        {
+          navLinks.style.right="0";
+        }
+        function hideMenu()
+        {
+          navLinks.style.right="-250px";
+        }
+      
       </script>
 </body>
 </html>
