@@ -1,278 +1,462 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+button {
+  position: relative;
+  border: none;
+  font-size: 18px;
+  transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  outline: none;
+  border-radius: 15px;
+  margin: 0 10px;
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+}
+button:active {
+  transform: translateY(3px);
+}
+button::after, button::before {
+  border-radius: 15px;
+}
+.material-bubble {
+  background-color: transparent;
+  color: white;
+  border: none;
+  overflow: hidden;
+  box-shadow: none;
+}
+.material-bubble:hover {
+  color: white;
+}
+.material-bubble::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #3E74FF;
+  transition: opacity 0.3s, border 0.3s;
+  border-radius: 15px;
+}
+.material-bubble:hover::before {
+  opacity: 0;
+  border-radius: 15px;
+}
+.material-bubble::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 200px;
+  background-color: #3E74FF;
+  border-color: transparent;
+  border-radius: 15px;
+  transform: translate(-10px, -70px) scale(0.1);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+.material-bubble:hover::after {
+  opacity: 1;
+  transform-origin: 100px 100px;
+  transform: scale(1) translate(-10px, -70px);
+}
+
+/* Left is everything but the huge picture */
+/* Right is the picture which is almost always in the background */
+
+
+@media screen and (min-width: 280px){
   
-  body {
-    background-color: black;
-    color: white;
-    font-family: sans-serif;
+  .container{
     overflow: hidden;
   }
+  .material-bubble:hover::after{
+    transform: scale(1) translate(10px, -70px);
+  }
+  /* Left */
+
+  .Left{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    position: absolute;
+    overflow: hidden;
+  }
+  .logoA{
+    margin: 0 0 2rem 0;
+  }
+  .logo{
+    margin: 0.5rem 0 1rem 0;
+  }
+  .logo img{
+    width: 15%;
+    height: 15%;
+  }
+  .intro{
+    margin: 1rem 0 2rem 0;
+  }
+  .heading{
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+    color: #3E74FF;
+  }
+  .lineBreak{
+    margin: 0.3rem 0 1.3rem 0;
+    border-top: 0.47px solid white;
+    width: 10rem;
+  }
+  .para{
+    width: 100%;
+  }
+  .stores{
+    margin: 1rem 0;
+  }
+  .stores img{
+    width: 60%;
+  }
+  /* .btn button{
+    background-color: black;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 2px solid #3E74FF;
+    color: white;
+    border-radius: 15px;
+  } */
+  /* .btn button:hover{
+    background-color: #3E74FF;
+  } */
+
+  /* Right */
+
+  .Right{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    filter: opacity(0.3);
+  }
+  .Right img{
+    width: 300%;
+    height: 150%;
+    position: relative;
+    left: -10rem;
+    top: -5rem;
+  }
+}
+
+@media screen and (min-width: 375px){
   
+  /* Left */
   
-  @media screen and (min-width: 280px){
-    
-    .container{
-      overflow: hidden;
-    }
+  .Left{
+    margin-top: 5rem;
+  }
+  .intro{
+    margin-top: 4rem;
+    letter-spacing: 0.025rem;
+  }
+  .heading{
+    font-size: 1.5rem;
+  }
+  .lineBreak{
+    width: 13rem;
+  }
+  .para{
+    font-size: 1.05rem;
+  }
+  .stores{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    margin-left: -0.5rem;
+    margin-top: 2rem;
+  }
+  .stores img{
+    width: 40%;
+  }
+  .btn{
+    margin: 2rem auto;
+  }
+  .btn button{
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+  }
+
+  /* Right */
+
+  .Right img{
+    top: 5rem;
+    left: -5rem;
+    width: 200%;
+  }
+}
+
+@media screen and (min-width: 768px){
   
-    /* Left */
+  /* Left */
   
-    .Left{
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: baseline;
-      margin: 1.5rem 0 1.5rem 1.5rem;
-      position: absolute;
-      overflow: hidden;
-    }
-    .logoA{
-      margin: 0 0 2rem 0;
-    }
-    .logo{
-      margin: 0.5rem 0 1rem 0;
-    }
-    .logo img{
-      width: 20%;
-      height: 20%;
-    }
-    .intro{
-      margin: 1rem 0 2rem 0;
-    }
-    .heading{
-      margin: 0.5rem 0;
-      font-size: 1.3rem;
-      color: #3E74FF;
-    }
-    .lineBreak{
-      margin: 0.3rem 0 1.3rem 0;
-      border-top: 0.47px solid white;
-      width: 10rem;
-    }
-    .para{
-      width: 100%;
-    }
-    .stores{
-      margin: 1rem 0;
-    }
-    .stores img{
-      width: 60%;
-    }
-    .btn button{
-      background-color: black;
-      padding: 1rem;
-      font-size: 1.2rem;
-      border: 2px solid #3E74FF;
-      color: white;
-      border-radius: 15px;
-    }
-    .btn button:hover{
-      background-color: #3E74FF;
-    }
-  
-    /* Right */
-  
-    .Right{
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      filter: opacity(0.3);
-    }
-    .Right img{
-      width: 300%;
-      height: 150%;
-      position: relative;
-      left: -10rem;
-      top: -5rem;
-    }
+  .logo img{
+    width: 10%;
+    height: 10%;
+  }
+  .heading{
+    font-size: 3rem;
+  }
+  .para{
+    font-size: 1.7rem;
+  }
+  .lineBreak{
+    width: 45%;
+  }
+  .stores img{
+    width: 35%;
+  }
+
+  /* Right */
+
+  .Right img{
+    top: -13rem;
+    left: -7rem;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .logoA img{
+    width: 15rem;
+    height: 12rem;
   }
   
-  @media screen and (min-width: 375px){
-    
-    /* Left */
-    
-    .Left{
-      margin-top: 5rem;
-    }
-    .intro{
-      margin-top: 4rem;
-      letter-spacing: 0.025rem;
-    }
-    .heading{
-      font-size: 1.5rem;
-    }
-    .lineBreak{
-      width: 13rem;
-    }
-    .para{
-      font-size: 1.05rem;
-    }
-    .stores{
-      display: flex;
-      justify-content: baseline;
-      align-items: center;
-      margin-left: -0.5rem;
-      margin-top: 2rem;
-    }
-    .stores img{
-      width: 40%;
-    }
-    .btn{
-      margin: 2rem auto;
-    }
-    .btn button{
-      padding: 1rem 3rem;
-      font-size: 1.5rem;
-    }
-  
-    /* Right */
-  
-    .Right img{
-      top: 5rem;
-      left: -5rem;
-      width: 200%;
-    }
+  /* Left */
+
+  .Left{
+    margin: 3.5rem 0 0 2.5rem;
+  }
+  .heading{
+    font-size: 4rem;
+  }
+  .para{
+    font-size: 2rem;
+  }
+  .stores img{
+    width: 30%;
+  }
+  .btn{
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (max-height: 800px){
+  .Left{
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-height: 568px){
+  .logoA img{
+    width: 70%;
+    height: 70%;
+  }
+  .logo img{
+    width: 15%;
+    height: 15%;
+  }
+  .material-bubble:hover::after{
+    transform: scale(1) translate(-10px, -70px);
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width:1099px){
+
+  /* Left */
+
+  .Left{
+    margin: 1rem 0 0 2rem;
+  }
+  .logo img{
+    width: 5rem;
+    height: 5rem;
+  }
+  .heading{
+    font-size: 2rem;
+  }
+  .lineBreak{
+    width: 12rem;
+  }
+  .para{
+    font-size: 1.3rem;
+  }
+  .stores img{
+    width: 15%;
+  }
+  .btn{
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1100px){
+
+  .material-bubble:hover::after{
+    transform: scale(1) translate(-10px, -70px);
   }
   
-  @media screen and (min-width: 768px){
-    
-    /* Left */
-    
-    .logo img{
-      width: 10%;
-      height: 10%;
-    }
-    .heading{
-      font-size: 3rem;
-    }
-    .para{
-      font-size: 1.7rem;
-    }
-    .lineBreak{
-      width: 45%;
-    }
-    .stores img{
-      width: 35%;
-    }
-  
-    /* Right */
-  
-    .Right img{
-      top: -13rem;
-      left: -7rem;
-    }
+  .logoA img{
+    width: 10rem;
+    height: 10rem;
   }
-  
-  @media screen and (min-width: 1024px){
-    .logoA img{
-      width: 15rem;
-      height: 12rem;
-    }
-    
-    /* Left */
-  
-    .Left{
-      margin: 3.5rem 0 0 2.5rem;
-    }
-    .heading{
-      font-size: 4rem;
-    }
-    .para{
-      font-size: 2rem;
-    }
-    .stores img{
-      width: 30%;
-    }
-    .btn{
-      margin-top: 4rem;
-    }
+  .logoA{
+    margin-bottom: 1rem;
   }
-  
-  @media screen and (max-height: 800px){
-    .Left{
-      margin-top: 1.5rem;
-    }
+
+  /* Left */
+
+  .Left{
+    margin-top: 1rem;
   }
-  
-  @media screen and (max-height: 568px){
-    .logoA img{
-      width: 70%;
-      height: 70%;
-    }
-    .logo img{
-      width: 15%;
-      height: 15%;
-    }
+  .intro{
+    margin-top: 2rem;
   }
-  
-  @media screen and (min-width: 1100px){
-  
-    .container{
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-  
-    .logoA img{
-      width: 10rem;
-      height: 10rem;
-    }
-    .logoA{
-      margin-bottom: 1rem;
-    }
-  
-    /* Left */
-  
-    .Left{
-      margin-top: 1rem;
-    }
-    .intro{
-      margin-top: 2rem;
-    }
-    .logo img{
-      width: 5%;
-      height: 5%;
-      margin-top: 0;
-    }
-    .logo{
-      margin-top: 0;
-    }
-    .heading{
-      font-size: 2rem;
-    }
-    .lineBreak{
-      width: 14rem;
-    }
-    .para{
-      font-size: 1rem;
-    }
-    .stores img{
-      width: 15%;
-    }
-    .stores{
-      margin-bottom: 0;
-    }
-    .btn{
-      margin: 0 0;
-    }
-    .btn button{
-      font-size: 1rem;
-      padding: 0.75rem 2rem;
-    }
-  
-    /* Right */
-    .Right{
-      filter: none;
-    }
-    .Right img{
-      width: 65%;
-      height: 90%;
-      left: 55%;
-      top: -5rem;
-    }
+  .logo img{
+    width: 5%;
+    height: 5%;
+    margin-top: 0;
   }
+  .logo{
+    margin-top: 0;
+  }
+  .heading{
+    font-size: 2rem;
+  }
+  .lineBreak{
+    width: 14rem;
+  }
+  .para{
+    font-size: 1rem;
+  }
+  .stores img{
+    width: 15%;
+  }
+  .stores{
+    margin-bottom: 0;
+  }
+  .btn{
+    margin: 0 0;
+  }
+  .btn button{
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+  }
+
+  /* Right */
+  .Right{
+    filter: none;
+  }
+  .Right img{
+    width: 65%;
+    height: 90%;
+    left: 55%;
+    top: -5rem;
+  }
+}
+
+@media screen and (max-height: 600px) and (max-width: 1099px){
+
+  /* Left */
+
+  .Left{
+    margin: 2rem;
+  }
+  .logo{
+    margin: 0;
+  }
+  .logo img{
+    width: 3rem;
+    height: 3rem;
+  }
+  .heading{
+    font-size: 2rem;
+  }
+  .lineBreak{
+    width: 15rem;
+  }
+  .para{
+    font-size: 1.3rem;
+  }
+  .stores{
+    margin-bottom: 0;
+  }
+  .stores img{
+    width: 10rem;
+  }
+  .btn{
+    margin: 0;
+  }
+
+  /* Right */
+
+  .Right img{
+    width: 100%;
+    height: 100%;
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) and (max-height: 1099px){
+
+  /* Right */
+  .Right{
+    height: 100vh;
+  }
+  .Right img{
+    top: 5rem;
+  }
+}
+
+@media screen and (max-width: 465px) and (max-height: 1099px){
+
+  /* Left */
+  .heading{
+    font-size: 1.5rem;
+  }
+  .lineBreak{
+    width: 10rem;
+  }
+  .para{
+    font-size: 0.8rem;
+  }
+  .stores img{
+    width: 7rem;
+  }
+  /* Right */
+  
+  .Right{
+    height: 100vh;
+  }
+  .Right img{
+    width: 200%;
+    top: 5rem;
+    left: -30%;
+  }
+}
