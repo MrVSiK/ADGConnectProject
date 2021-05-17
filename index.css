@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  
+  
+  @media screen and (min-width: 280px){
+    
+    .container{
+      overflow: hidden;
+    }
+  
+    /* Left */
+  
+    .Left{
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: baseline;
+      margin: 1.5rem 0 1.5rem 1.5rem;
+      position: absolute;
+      overflow: hidden;
+    }
+    .logoA{
+      margin: 0 0 2rem 0;
+    }
+    .logo{
+      margin: 0.5rem 0 1rem 0;
+    }
+    .logo img{
+      width: 20%;
+      height: 20%;
+    }
+    .intro{
+      margin: 1rem 0 2rem 0;
+    }
+    .heading{
+      margin: 0.5rem 0;
+      font-size: 1.3rem;
+      color: #3E74FF;
+    }
+    .lineBreak{
+      margin: 0.3rem 0 1.3rem 0;
+      border-top: 0.47px solid white;
+      width: 10rem;
+    }
+    .para{
+      width: 100%;
+    }
+    .stores{
+      margin: 1rem 0;
+    }
+    .stores img{
+      width: 60%;
+    }
+    .btn button{
+      background-color: black;
+      padding: 1rem;
+      font-size: 1.2rem;
+      border: 2px solid #3E74FF;
+      color: white;
+      border-radius: 15px;
+    }
+    .btn button:hover{
+      background-color: #3E74FF;
+    }
+  
+    /* Right */
+  
+    .Right{
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      filter: opacity(0.3);
+    }
+    .Right img{
+      width: 300%;
+      height: 150%;
+      position: relative;
+      left: -10rem;
+      top: -5rem;
+    }
+  }
+  
+  @media screen and (min-width: 375px){
+    
+    /* Left */
+    
+    .Left{
+      margin-top: 5rem;
+    }
+    .intro{
+      margin-top: 4rem;
+      letter-spacing: 0.025rem;
+    }
+    .heading{
+      font-size: 1.5rem;
+    }
+    .lineBreak{
+      width: 13rem;
+    }
+    .para{
+      font-size: 1.05rem;
+    }
+    .stores{
+      display: flex;
+      justify-content: baseline;
+      align-items: center;
+      margin-left: -0.5rem;
+      margin-top: 2rem;
+    }
+    .stores img{
+      width: 40%;
+    }
+    .btn{
+      margin: 2rem auto;
+    }
+    .btn button{
+      padding: 1rem 3rem;
+      font-size: 1.5rem;
+    }
+  
+    /* Right */
+  
+    .Right img{
+      top: 5rem;
+      left: -5rem;
+      width: 200%;
+    }
+  }
+  
+  @media screen and (min-width: 768px){
+    
+    /* Left */
+    
+    .logo img{
+      width: 10%;
+      height: 10%;
+    }
+    .heading{
+      font-size: 3rem;
+    }
+    .para{
+      font-size: 1.7rem;
+    }
+    .lineBreak{
+      width: 45%;
+    }
+    .stores img{
+      width: 35%;
+    }
+  
+    /* Right */
+  
+    .Right img{
+      top: -13rem;
+      left: -7rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px){
+    .logoA img{
+      width: 15rem;
+      height: 12rem;
+    }
+    
+    /* Left */
+  
+    .Left{
+      margin: 3.5rem 0 0 2.5rem;
+    }
+    .heading{
+      font-size: 4rem;
+    }
+    .para{
+      font-size: 2rem;
+    }
+    .stores img{
+      width: 30%;
+    }
+    .btn{
+      margin-top: 4rem;
+    }
+  }
+  
+  @media screen and (max-height: 800px){
+    .Left{
+      margin-top: 1.5rem;
+    }
+  }
+  
+  @media screen and (max-height: 568px){
+    .logoA img{
+      width: 70%;
+      height: 70%;
+    }
+    .logo img{
+      width: 15%;
+      height: 15%;
+    }
+  }
+  
+  @media screen and (min-width: 1100px){
+  
+    .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  
+    .logoA img{
+      width: 10rem;
+      height: 10rem;
+    }
+    .logoA{
+      margin-bottom: 1rem;
+    }
+  
+    /* Left */
+  
+    .Left{
+      margin-top: 1rem;
+    }
+    .intro{
+      margin-top: 2rem;
+    }
+    .logo img{
+      width: 5%;
+      height: 5%;
+      margin-top: 0;
+    }
+    .logo{
+      margin-top: 0;
+    }
+    .heading{
+      font-size: 2rem;
+    }
+    .lineBreak{
+      width: 14rem;
+    }
+    .para{
+      font-size: 1rem;
+    }
+    .stores img{
+      width: 15%;
+    }
+    .stores{
+      margin-bottom: 0;
+    }
+    .btn{
+      margin: 0 0;
+    }
+    .btn button{
+      font-size: 1rem;
+      padding: 0.75rem 2rem;
+    }
+  
+    /* Right */
+    .Right{
+      filter: none;
+    }
+    .Right img{
+      width: 65%;
+      height: 90%;
+      left: 55%;
+      top: -5rem;
+    }
+  }
