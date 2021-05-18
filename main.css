@@ -46,7 +46,9 @@ nav{
     color: #fff;
     font-size: 20px;
     z-index: 1;
-    position: relative;
+    /* Changed position and added width */
+    position: fixed;
+    width: 95%;
     
   }
   .nav-logo
@@ -176,4 +178,163 @@ nav{
     
 }
 
+/*CSS for the content pages*/
+/* Profile Section */
+
+
+.fullpage-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.img-container{
+    display: flex;
+    flex-direction: column;
+}
+.space{
+    flex-grow: 1000;
+}
+
+.info{
+    text-align: left;
+    font-size: 2vw;
+    line-height: 149.34%;
+    letter-spacing: 0.025em;
+    width: 51%;
+    padding: 3% 5%;
+}
+
+.info h2 {
+    color: #3E74FF;
+    font-size: 6.2vw;
+    padding: 20% 2% 10%;
+}
+
+.info p{
+    padding: 1.2% 2% 0;
+}
+
+img{
+    height: 80vh;
+    width: auto;
+}
+.img img{
+    position: relative;
+    right: 40px;
+    top: 0.05vh;
+}
+
 /* Media queries */
+/* Media Queries for all Pages */
+@media(max-width:1365px) and (min-height:1023px){
+  .responsive-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .space-1{
+    flex-grow: 10;
+  }
+    .fullpage-container{
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .img-container{
+    display: block;
+    /* text-align: center; */
+  }
+  .img-mom img{
+    height: 50vh;
+  }
+  .img img{
+    right: 0;
+    height: 50vh;
+  }
+  .info{
+    height: 33vh;
+    width: 90%;
+    line-height: 3vh!important; 
+  }
+
+  .info h2{
+    padding: 2% 2%;
+    font-size: 6vh!important;
+  }
+
+  .info p{
+    font-size: 2.5vh!important;
+    
+  }
+}
+@media(max-width:700px){
+  .responsive-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .space-1{
+    flex-grow: 10;
+  }
+    .fullpage-container{
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .img-container{
+    display: block;
+    /* text-align: center; */
+  }
+  .img-mom img{
+    height: 50vh;
+  }
+  .img img{
+    right: 0;
+    height: 50vh;
+  }
+
+  .info{
+    height: 33vh;
+    width: 90%;
+    line-height: 20px; 
+  }
+
+  .info h2{
+    padding: 2% 2%;
+    font-size: 30px;
+  }
+
+  .info p{
+    font-size: 15px;
+    
+  }
+
+}
+
+@media (max-height:414px){
+  .info h2{
+    padding-top: 20%;
+  }
+  .fullpage-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.img-container{
+    display: flex;
+    flex-direction: column;
+}
+.space{
+    flex-grow: 1000;
+}
+}
+
+@media(max-width:340px){
+  
+  .info h2{
+    font-size: 20px;
+  }
+  .info p{
+    font-size: 13px;
+  }
+}

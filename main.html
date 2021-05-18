@@ -73,19 +73,106 @@
     
         <!-- Acknowledgement section -->
         <div class="section section-acknowledgement" data-anchor="acknowledgement">
-            Acknowledgement
+            <div class="responsive-container">
+              <div class="space-1">
+            
+              </div>
+              <div class="fullpage-container container-acknowledgement">
+                <div class="info">
+                  <h2>Acknowledgement</h2>
+                  <p>There are two buttons under each Meeting or Task posted in the Alert Section.</p>
+                  <p>Please Note that you can only choose one option.</p>
+                  <p>Clicking on Acknowledge means that you’re taking part in the Meeting or Task.</p>
+                  <p>Clicking on Unavailable will open a popUp. You should post your reasons for being unavailable
+                    here.</p>
+                </div>
+                <div class="img-container">
+                  <div class="space">
+                  </div>
+                  <div class="img">
+                    <img src="assets/acknowledge/Unavailable.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
     
         <!-- MOM section -->
         <div class="section section-mom" data-anchor="mom">
-            MOM
+            <div class="responsive-container">
+              <div class="space-1">
+            
+              </div>
+              <div class="fullpage-container container-mom">
+            
+                <div class="info">
+                  <h2>MOM</h2>
+                  <p>Minutes of Meeting or MOM are posted under this section.</p>
+                  <p>Click on any meeting in the list to open the MOM.</p>
+                  <p>Here you can find a short summary of what the meeting was called for and the points discussed.
+                  </p>
+                </div>
+                <div class="img-container">
+                  <div class="space">
+                  </div>
+                  <div class="img-mom">
+                    <img src="assets/mom/Group 16080.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
     
         <!-- Profile section -->
         <div class="section section-profile" data-anchor="profile">
-            Profile
+            <div class="responsive-container">
+              <div class="space-1">
+            
+              </div>
+              <div class="fullpage-container container-profile">
+                <div class="info">
+                  <h2>Profile</h2>
+                  <p>All the details that you’ve filled out during the Sign Up Process are shown here.</p>
+                  <p>In case of any changes or updates please Contact Us.</p>
+                  <p>You can Reset your Password from this screen.</p>
+                  <p>If you choose to Reset your Password, a link is sent to the Registered E-Mail ID to do the same.
+                  </p>
+                </div>
+                <div class="img-container">
+                  <div class="space">
+                  </div>
+                  <div class="img">
+                    <img src="assets/profile/Profile.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
+      <!-- Script for MOM -->
+      <script>
+        function imageCheck() {
+          if (window.innerHeight >= 1023) {
+            if (window.innerWidth <= 1365) {
+              document.querySelector(".img-mom img").src = "assets/mom/MOM Detail.svg";
+            }
+            else {
+              document.querySelector(".img-mom img").src = "assets/mom/Group 16080.svg";
+            }
+          }
+          else {
+            if (window.innerWidth <= 700) {
+              document.querySelector(".img-mom img").src = "assets/mom/MOM Detail.svg";
+            }
+            else {
+              document.querySelector(".img-mom img").src = "assets/mom/Group 16080.svg";
+            }
+          }
+        }
+        imageCheck();
+        window.addEventListener("resize", imageCheck);
+
+      </script>
       <script>
         new fullpage("#fullpage", {
           //options here
