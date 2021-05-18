@@ -108,7 +108,7 @@ nav .fa{
     display: none;
 }
 /* responsive_code_nav_bar*/
-@media(max-width:935px) /*for devices less than or equal to 980px */
+@media(max-width:935px) 
 {
 .nav-logo
 {
@@ -127,8 +127,6 @@ nav .fa{
   position: absolute;
   background-color: black;
   background-image: linear-gradient(45deg, rgba(122, 125, 146, 0.62), rgba(5, 23, 129, 0.58));
-  /* background-repeat: no-repeat;
-  background-position: center; */
   height:100vh;
   width:250px;
   top: 0;
@@ -149,7 +147,7 @@ nav .fa{
 }
 
 }
-@media(max-width:375px) /*for devices less than or equal to 980px */
+@media(max-width:375px) 
 {
 .nav-logo
 {
@@ -168,8 +166,6 @@ nav .fa{
   position: absolute;
   background-color: black;
   background-image: linear-gradient(45deg, rgba(122, 125, 146, 0.62), rgba(5, 23, 129, 0.58));
-  /* background-repeat: no-repeat;
-  background-position: center; */
   height:100vh;
   width:250px;
   top: 0;
@@ -190,7 +186,7 @@ nav .fa{
 }
 
 }
-@media(max-width:280px) /*for devices less than or equal to 980px */
+@media(max-width:280px) 
 {
 .nav-logo
 {
@@ -209,8 +205,6 @@ nav .fa{
   position: absolute;
   background-color: black;
   background-image: linear-gradient(45deg, rgba(122, 125, 146, 0.62), rgba(5, 23, 129, 0.58));
-  /* background-repeat: no-repeat;
-  background-position: center; */
   height:100vh;
   width:250px;
   top: 0;
@@ -231,7 +225,6 @@ nav .fa{
 }
 
 }
-
 
 .fullpage-container{
     height: 100vh;
