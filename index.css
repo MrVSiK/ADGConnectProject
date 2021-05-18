@@ -4,11 +4,16 @@
   box-sizing: border-box;
 }
 
+@font-face{
+  font-family: SF Pro Display;
+  src: url("./assets/FontsFree-Net-SFProDisplay-Regular.ttf");
+}
+
 body {
   background-color: black;
   color: white;
-  font-family: sans-serif;
   overflow: hidden;
+  font-family: SF Pro Display;
 }
 .container{
   display: flex;
@@ -28,6 +33,7 @@ button {
   margin: 0 10px;
   padding: 1rem 2rem;
   border: 1px solid transparent;
+  font-family: SF Pro Display;
 }
 button:active {
   transform: translateY(3px);
@@ -64,8 +70,8 @@ button::after, button::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  width: 300px;
+  left: -0.5rem;
+  width: 350px;
   height: 200px;
   background-color: #3E74FF;
   border-color: transparent;
@@ -103,7 +109,6 @@ button::after, button::before {
     align-items: baseline;
     margin: 1.5rem 0 1.5rem 1.5rem;
     position: absolute;
-    overflow: hidden;
   }
   .logoA{
     margin: 0 0 2rem 0;
@@ -133,21 +138,16 @@ button::after, button::before {
   }
   .stores{
     margin: 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
   .stores img{
-    width: 60%;
+    width: 40%;
   }
-  /* .btn button{
-    background-color: black;
-    padding: 1rem;
-    font-size: 1.2rem;
-    border: 2px solid #3E74FF;
-    color: white;
-    border-radius: 15px;
-  } */
-  /* .btn button:hover{
-    background-color: #3E74FF;
-  } */
+  #google{
+    width: 50%;
+  }
 
   /* Right */
 
@@ -191,7 +191,6 @@ button::after, button::before {
     display: flex;
     justify-content: baseline;
     align-items: center;
-    margin-left: -0.5rem;
     margin-top: 2rem;
   }
   .stores img{
@@ -233,6 +232,12 @@ button::after, button::before {
   }
   .stores img{
     width: 35%;
+  }
+  #google{
+    width: 42%;
+  }
+  .btn{
+    margin: 0;
   }
 
   /* Right */
@@ -334,6 +339,7 @@ button::after, button::before {
 
   .Left{
     margin-top: 1rem;
+    margin-left: 3rem;
   }
   .intro{
     margin-top: 2rem;
@@ -357,6 +363,9 @@ button::after, button::before {
   }
   .stores img{
     width: 15%;
+  }
+  #google{
+    width: 19%;
   }
   .stores{
     margin-bottom: 0;
@@ -458,5 +467,36 @@ button::after, button::before {
     width: 200%;
     top: 5rem;
     left: -30%;
+  }
+}
+
+@media screen and (min-height: 500px) and (max-height: 600px) and (max-width: 1099px) and (min-width: 375px){
+  
+  /* Left */
+
+  .Left{
+    margin-top: 1rem;
+  }
+  .heading{
+    font-size: 1.5rem;
+  }
+  .lineBreak{
+    width: 12rem;
+  }
+  .para{
+    font-size: 1rem;
+  }
+  .stores img{
+    width: 15%;
+  }
+  #google{
+    width: 19%;
+  }
+  .btn button{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  .btn{
+    margin: 0;
   }
 }
