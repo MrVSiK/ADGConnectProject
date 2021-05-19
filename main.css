@@ -56,7 +56,9 @@ nav{
   color: #fff;
   font-size: 24px;
   z-index: 1;
-  position: relative;
+  /* Changed position and width for fullpage.js */
+  position: fixed;
+  width: 100%;
   
 }
 .nav-logo
@@ -241,18 +243,21 @@ nav .fa{
 }
 
 .info{
+  align-self: center;
     text-align: left;
-    font-size: 2vw;
+    font-size: 28px;
+    /* 2vw */
     line-height: 149.34%;
-    letter-spacing: 0.025em;
+    letter-spacing: calc(0.025em+0.5px);
     width: 51%;
     padding: 3% 5%;
 }
 
 .info h2 {
     color: #3E74FF;
-    font-size: 6.2vw;
-    padding: 20% 2% 10%;
+    font-size: 72px;
+    /* 6.2vw */
+    padding: 8% 2% ;
 }
 
 .info p{
@@ -298,7 +303,7 @@ img{
   .info{
     height: 33vh;
     width: 90%;
-    line-height: 3vh!important; 
+    line-height: 149.34%; 
   }
 
   .info h2{
@@ -311,6 +316,16 @@ img{
     
   }
 }
+/* @media(min-width:700px) and (max-width:820px){
+  .info h2{
+    font-size: 6.2vw;
+  }
+  .info p{
+    font-size: 2vw;
+    line-height: 149.34%;
+  }
+} */
+
 @media(max-width:700px){
   .responsive-container{
     display: flex;
@@ -337,18 +352,19 @@ img{
   }
 
   .info{
+    align-self: center;
     height: 33vh;
     width: 90%;
-    line-height: 20px; 
+    line-height: 70.34%; 
   }
 
   .info h2{
     padding: 2% 2%;
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .info p{
-    font-size: 15px;
+    font-size: 17px;
     
   }
 
