@@ -303,11 +303,12 @@ img{
   .info{
     height: 33vh;
     width: 90%;
-    line-height: 149.34%; 
+    line-height: 143.34%;
+    padding-bottom: 5%;
   }
 
   .info h2{
-    padding: 2% 2% 7%;
+    padding: 0 2% 3%;
     font-size: 6vh!important;
   }
 
