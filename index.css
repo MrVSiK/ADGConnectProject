@@ -24,6 +24,7 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
+  letter-spacing: 2.5%;
 }
 
 .ADGlogo {
@@ -40,6 +41,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding-left: 5%;
+  padding-top: 5%;
 }
 
 .intro {
@@ -48,7 +50,7 @@ body {
 }
 
 .connect-logo {
-    height: 5rem;
+    height: 4rem;
     margin-bottom: 20px;
 }
 
@@ -115,6 +117,7 @@ button::before {
 
 .material-bubble:hover {
   color: white;
+  cursor: pointer;
 }
 
 .material-bubble::before {
@@ -193,11 +196,13 @@ button::before {
     }
 }
 
-@media screen and (max-width: 800px) {
-	
+@media screen and (min-width: 1024px) {
+  .intro{
+    margin-top: 0.5rem;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 426px) and (max-width: 1024px) {
 	html {
 		font-size: 80%;
 	}
