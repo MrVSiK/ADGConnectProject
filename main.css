@@ -128,7 +128,7 @@ nav .fa{
 .nav-links{
   position: absolute;
   background-color: rgb(14, 13, 13);
-  background-image: url("./navbar_background_img.png");
+  background-image: url(".assets/navbar/navbar_background_img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
