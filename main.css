@@ -106,6 +106,7 @@ nav .fa{
 /* responsive_code_nav_bar*/
 @media(max-width:1258px) 
 {
+  
   .nav-logo
 {
   display: none;
@@ -123,22 +124,25 @@ nav .fa{
 }
 .nav-links ul li{
   display:block;
+  padding-bottom: 50px;
 }
+
 
 .nav-links{
   position: absolute;
   background-color: rgb(14, 13, 13);
-  background-image: url("./navbar_background_img.png");
+  background-image: url("./assets/navbar/navbar_background_img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   /* background-attachment: fixed; */
   height:100vh;
-  width:400px;
+  width:340px;
   top: 0;
-  right: -400px;
+  right: -340px;
   text-align: left;
   z-index:2;
+  
   
 }
   nav .fa{
@@ -151,6 +155,7 @@ nav .fa{
 }
 .nav-links ul{
   padding: 40px;
+  line-height: 29px;
 }
 
 }
@@ -178,22 +183,24 @@ nav .fa{
 }
 .nav-links ul li{
   display:block;
+  padding-bottom: 50px;
 }
 
 .nav-links{
   position: absolute;
   background-color: rgb(14, 13, 13);
-  background-image: url("./navbar_background_img.png");
+  background-image: url("./assets/navbar/navbar_background_img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   /* background-attachment: fixed; */
   height:100vh;
-  width:300px;
+  width:317px;
   top: 0;
-  right: -300px;
+  right: -317px;
   text-align: left;
   z-index:2;
+  line-height: 29px;
   
 }
 nav .fa{
