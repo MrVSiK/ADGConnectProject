@@ -42,14 +42,10 @@ body {
 
 /* Navbar */
 
-/*Nav Bar*/
 nav{
   background-color: rgba(255, 255, 255, 0.02);
   display: flex;
-  /* width: 1440px;
-  height: 80px;
-  left: 0px;
-  top: 0px; */
+  height: 10vh;
   padding: 0% 0%;
   justify-content: space-between;
   align-items: center;
@@ -64,11 +60,15 @@ nav{
 .nav-logo
 {
   margin: 10px;
-  width: 246px;
-  height: 83.46px;
+  width: auto;
+  height: 7vh;
   left: -13px;
   top: -9px;
   clip: rect(0px,20px,0px,0px);
+}
+.nav-logo-2
+{
+  display: none;
 }
 .nav-links{
   flex: 1;
@@ -77,30 +77,24 @@ nav{
 .nav-links ul li{
   list-style:none;
   display:inline-block;
-  padding: 8px 12px;
+  padding: 8px 24px;
   position: relative;
 }
 .nav-links ul li a{
   color: #fff;
+  letter-spacing: 0.06em;
+  line-height: 29px;
   text-decoration: none;
   font-size: 13px;
   font-family: SF Pro Display;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 24px;
 
 }
-.nav-links ul li::after{
-  content: '';
-  width: 0%;
-  height:2px;
-  background: #fff;
-  display: block;
-  margin: auto;
+.nav-links ul li a:hover {
+  color: #3E74FF;
   transition: 0.5s;
-}
-.nav-links ul li:hover::after{
-  width:100%
 }
 nav .fa{
   display: none;
@@ -110,16 +104,22 @@ nav .fa{
     display: none;
 }
 /* responsive_code_nav_bar*/
-@media(max-width:935px) 
+@media(max-width:1258px) 
 {
-.nav-logo
+  .nav-logo
 {
-  margin: 10px;
-  width: 246px;
-  height: 83.46px;
-  left: -13px;
-  top: -9px;
-  clip: rect(0px,20px,0px,0px);
+  display: none;
+}
+.nav-logo-2
+{ 
+  margin: 40px;
+  margin-bottom: 0px;
+  width: auto;
+  height: 7vh;
+  left: -10.43px;
+  top: -7.22px;
+  display: block;
+ 
 }
 .nav-links ul li{
   display:block;
@@ -127,14 +127,74 @@ nav .fa{
 
 .nav-links{
   position: absolute;
-  background-color: black;
-  background-image: linear-gradient(45deg, rgba(122, 125, 146, 0.62), rgba(5, 23, 129, 0.58));
+  background-color: rgb(14, 13, 13);
+  background-image: url("./navbar_background_img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
   height:100vh;
-  width:250px;
+  width:400px;
   top: 0;
-  right: -250px;
+  right: -400px;
   text-align: left;
   z-index:2;
+  
+}
+  nav .fa{
+  display: block;
+  color: #fff;
+  margin: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  
+}
+.nav-links ul{
+  padding: 40px;
+}
+
+}
+
+@media(max-width:770px) 
+{
+  .nav-logo
+{
+  display: none;
+}
+.nav-logo-2
+{ 
+  /* position: absolute; */
+  margin: 40px;
+  margin-bottom: 0px;
+  width: auto;
+  height: 7vh;
+  left: -10.43px;
+  top: -7.22px;
+
+  /* height: 7vh;
+  width: auto; */
+  display: block;
+  /* padding-left: 30px; */
+}
+.nav-links ul li{
+  display:block;
+}
+
+.nav-links{
+  position: absolute;
+  background-color: rgb(14, 13, 13);
+  background-image: url("./navbar_background_img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
+  height:100vh;
+  width:300px;
+  top: 0;
+  right: -300px;
+  text-align: left;
+  z-index:2;
+  
 }
 nav .fa{
  display: block;
@@ -149,85 +209,8 @@ nav .fa{
 }
 
 }
-@media(max-width:375px) 
-{
-.nav-logo
-{
-  margin: 10px;
-  width: 200px;
-  height: 50px;
-  left: -13px;
-  top: -9px;
-  clip: rect(0px,20px,0px,0px);
-}
-.nav-links ul li{
-  display:block;
-}
 
-.nav-links{
-  position: absolute;
-  background-color: black;
-  background-image: linear-gradient(45deg, rgba(122, 125, 146, 0.62), rgba(5, 23, 129, 0.58));
-  height:100vh;
-  width:250px;
-  top: 0;
-  right: -250px;
-  text-align: left;
-  z-index:2;
-}
-nav .fa{
- display: block;
-  color: #fff;
-  margin: 20px;
-  font-size: 22px;
-  cursor: pointer;
-  
-}
-.nav-links ul{
-  padding: 40px;
-}
-
-}
-@media(max-width:280px) 
-{
-.nav-logo
-{
-  margin: 10px;
-  width: 150px;
-  height: 50px;
-  left: -13px;
-  top: -9px;
-  clip: rect(0px,20px,0px,0px);
-}
-.nav-links ul li{
-  display:block;
-}
-
-.nav-links{
-  position: absolute;
-  background-color: black;
-  background-image: linear-gradient(45deg, rgba(122, 125, 146, 0.62), rgba(5, 23, 129, 0.58));
-  height:100vh;
-  width:250px;
-  top: 0;
-  right: -250px;
-  text-align: left;
-  z-index:2;
-}
-nav .fa{
- display: block;
-  color: #fff;
-  margin: 20px;
-  font-size: 22px;
-  cursor: pointer;
-  
-}
-.nav-links ul{
-  padding: 40px;
-}
-
-}
-
+ 
 .fullpage-container{
     height: 100vh;
     display: flex;
