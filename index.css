@@ -24,6 +24,7 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
+  letter-spacing: 2.5%;
 }
 
 .ADGlogo {
@@ -40,6 +41,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding-left: 5%;
+  padding-top: 5%;
 }
 
 .intro {
@@ -48,7 +50,7 @@ body {
 }
 
 .connect-logo {
-    height: 5rem;
+    height: 4rem;
     margin-bottom: 20px;
 }
 
@@ -56,6 +58,9 @@ body {
     font-size: 3rem;
     color: #3e74ff;
     margin-bottom: 5px;
+    letter-spacing: 0.2rem;
+    text-shadow: 1px 1px 2px #3e74ff;
+    font-weight: 600;
 }
 
 .intro hr {
@@ -80,9 +85,12 @@ body {
 }
 
 .stores img {
-    height: 2.5rem;
+    height: 3rem;
 }
 
+#google{
+  margin-left: 1rem;
+}
 
 button {
   position: relative;
@@ -91,9 +99,9 @@ button {
   outline: none;
   border-radius: 1rem;
   border: 2px solid #3e74ff;
-  margin: 0 10px;
   padding: 1rem 2rem;
   font-family: SF Pro Display;
+  width: 17rem;
 }
 
 button:active {
@@ -115,6 +123,7 @@ button::before {
 
 .material-bubble:hover {
   color: white;
+  cursor: pointer;
 }
 
 .material-bubble::before {
@@ -139,7 +148,7 @@ button::before {
   position: absolute;
   top: 0;
   left: -0.5rem;
-  width: 350px;
+  width: 500px;
   height: 200px;
   background-color: #3e74ff;
   border-color: transparent;
@@ -193,11 +202,13 @@ button::before {
     }
 }
 
-@media screen and (max-width: 800px) {
-	
+@media screen and (min-width: 1024px) {
+  .intro{
+    margin-top: 0.5rem;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 426px) and (max-width: 1024px) {
 	html {
 		font-size: 80%;
 	}
