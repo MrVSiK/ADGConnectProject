@@ -124,7 +124,9 @@ nav .fa{
 }
 .nav-links ul li{
   display:block;
+  padding-bottom: 50px;
 }
+
 
 .nav-links{
   position: absolute;
@@ -141,6 +143,7 @@ nav .fa{
   text-align: left;
   z-index:2;
   
+  
 }
   nav .fa{
   display: block;
@@ -152,6 +155,7 @@ nav .fa{
 }
 .nav-links ul{
   padding: 40px;
+  line-height: 29px;
 }
 
 }
@@ -179,6 +183,7 @@ nav .fa{
 }
 .nav-links ul li{
   display:block;
+  padding-bottom: 50px;
 }
 
 .nav-links{
@@ -195,6 +200,7 @@ nav .fa{
   right: -317px;
   text-align: left;
   z-index:2;
+  line-height: 29px;
   
 }
 nav .fa{
