@@ -60,7 +60,7 @@ body {
     color: #3e74ff;
     margin-bottom: 5px;
     letter-spacing: 0.2rem;
-    text-shadow: 1px 1px 2px #3e74ff;
+    text-shadow: 0.4px 0.4px 0.8px #3e74ff;
     font-weight: 600;
 }
 
@@ -91,6 +91,10 @@ body {
 
 #google{
   margin-left: 1rem;
+  cursor: pointer;
+}
+#apple{
+  cursor: pointer;
 }
 
 button {
