@@ -90,11 +90,12 @@ nav{
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
+  transition: color .1s;
 
 }
 .nav-links ul li a:hover {
   color: #3E74FF;
-  transition: 0.5s;
+  
 }
 nav .fa{
   display: none;
@@ -104,7 +105,7 @@ nav .fa{
     display: none;
 }
 /* responsive_code_nav_bar*/
-@media(max-width:1258px) 
+@media(max-width:1291px) 
 {
   
   .nav-logo
@@ -130,7 +131,7 @@ nav .fa{
 
 .nav-links{
   position: absolute;
-  background-color: rgb(14, 13, 13);
+  background-color: #111111;
   background-image: url("./assets/navbar/navbar_background_img.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -188,7 +189,7 @@ nav .fa{
 
 .nav-links{
   position: absolute;
-  background-color: rgb(14, 13, 13);
+  background-color: #111111;
   background-image: url("./assets/navbar/navbar_background_img.png");
   background-size: cover;
   background-repeat: no-repeat;
