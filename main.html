@@ -29,16 +29,16 @@
         <a href="index.html"><img class="nav-logo " src="./assets/navbar/Logo Title.svg" alt="nav-logo" ></a>
         
         <div class="nav-links" id="navLinks">
-        <i class="far fa fa-window-close" onclick="hideMenu()"></i>
+        <!-- <i class="far fa fa-window-close" onclick="hideMenu()"></i> -->
         <a href="index.html"><img class="nav-logo-2 " src="./assets/navbar/Logo Title.svg" alt="nav-logo-2" ></a>
         <ul>   
-        <li data-menuanchor="Signup"><a href="#signup">Signup</a></li>
-        <li data-menuanchor="Login"><a href="#login">Login</a></li>
-        <li data-menuanchor="Home"><a href="#home">Home</a></li>
-        <li data-menuanchor="Alerts"><a href="#alerts">Alerts</a></li>
-        <li data-menuanchor="Acknowledgement"><a href="#acknowledgement">Acknowledgement</a></li>
-        <li data-menuanchor="MOM"><a href="#mom">MOM</a></li>
-        <li data-menuanchor="Profile"><a href="#profile">Profile</a></li>
+        <li data-menuanchor="Signup"><a href="#signup" class="effect"onclick="delayedGreeting();">Signup</a></li>
+        <li data-menuanchor="Login"><a href="#login" class="effect"onclick="delayedGreeting();">Login</a></li>
+        <li data-menuanchor="Home"><a href="#home" class="effect"onclick="delayedGreeting();">Home</a></li>
+        <li data-menuanchor="Alerts"><a href="#alerts" class="effect"onclick="delayedGreeting();">Alerts</a></li>
+        <li data-menuanchor="Acknowledgement"><a href="#acknowledgement" class="effect"onclick="delayedGreeting();">Acknowledgement</a></li>
+        <li data-menuanchor="MOM"><a href="#mom" class="effect"onclick="delayedGreeting();">MOM</a></li>
+        <li data-menuanchor="Profile"><a href="#profile" class="effect"onclick="delayedGreeting();"> Profile</a></li>
         </ul>
         </div>    
         <i class="fas fa fa-bars" onclick="showMenu()"></i>
@@ -268,10 +268,21 @@
         function showMenu()
         {
           navLinks.style.right="0";
+          
         }
-        function hideMenu()
-        {
-          navLinks.style.right="-340px";
+        
+        function sleep(ms) {
+           return new Promise(
+          resolve => setTimeout(resolve, ms)
+            );
+          }
+
+        async function delayedGreeting() {
+        
+        await sleep(150);
+          
+          navLinks.style.right="-400px";
+        
         }
       
       </script>
