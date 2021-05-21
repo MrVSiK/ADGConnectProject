@@ -85,11 +85,10 @@ nav{
   letter-spacing: 0.06em;
   line-height: 29px;
   text-decoration: none;
-  font-size: 13px;
   font-family: SF Pro Display;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 22px;
   transition: color .1s;
 
 }
@@ -240,7 +239,7 @@ nav .fa{
     /* 2vw */
     line-height: 149.34%;
     letter-spacing: calc(0.025em+0.5px);
-    width: 45%;
+    width: 55%;
     padding: 3% 5%;
 }
 
@@ -249,10 +248,13 @@ nav .fa{
     font-size: 72px;
     /* 6.2vw */
     padding: 8% 2% ;
+    letter-spacing: 0.4rem;
 }
 
 .info p{
-    padding: 1.2% 2% 0;
+    padding: 2% 2% 0;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
 }
 
 img{
