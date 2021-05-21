@@ -215,14 +215,14 @@ button::before {
 
 @media screen and (min-width: 426px) and (max-width: 1024px) {
 	html {
-		font-size: 80%;
+		font-size: 90%;
 	}
 
 }
 
 @media screen and (max-width: 425px) {
 	html {
-		font-size: 65%;
+		font-size: 79%;
 	}
 }
 
